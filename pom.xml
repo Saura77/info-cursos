@@ -11,7 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>Curso-Flor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Curso-Flor</name>r
+    <name>Curso-Flor</name>
     <description>Curso-Flor</description>
     <properties>
         <java.version>11</java.version>
