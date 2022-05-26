@@ -97,8 +97,8 @@
     <h1 class="text-center">QUIERO MÁS INFO! </h1>
 </div>
 <form th:action="@{/}" th:object="${votante}" method="post" class="justify-content-center d-flex flex-column mb-4">
-    <input required="true" type="text" class="m-5" th:field="${votante.name}" placeholder="Nombre...">
-    <input required="true" type="text" class="m-5" th:field="${votante.lastname}" placeholder="Apellido...">
+    <input required="true" type="text" class="m-5" size="1rem" th:field="${votante.name}" placeholder="Nombre...">
+    <input required="true" type="text" class="m-5" size="1rem" th:field="${votante.lastname}" placeholder="Apellido...">
     <select name="combo" id="combo"  class="m-5" size="1rem" th:field="${votante.vote}">
         <option value="1">Presencial</option>
         <option value="2">Virtual Síncrono</option>
