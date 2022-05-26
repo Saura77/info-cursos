@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cursos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css" th:href="@{/css/style.css}">
+
+</head>
+<body>
+<div class="w-100 p-3 justify-content-center">
+    <h1>
+        Información de nuestros cursos:
+    </h1>
+</div>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead class="thead-primary">
+                        <tr>
+                            <th>CARACTERÍSTICA</th>
+                            <th>CURSO PRESENCIAL</th>
+                            <th>CURSO VIRTUAL SÍNCRONO</th>
+                            <th>CURSO VIRTUAL ASÍNCRONO</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="scope" >Precio</th>
+                            <td>$10.000,00</td>
+                            <td>$8.000,00</td>
+                            <td>$4.000,00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Profesores</th>
+                            <td>Basados en la experiencia</td>
+                            <td>Basados en la experiencia</td>
+                            <td>Basados en la experiencia</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Tipo</th>
+                            <td>Normal en vivo</td>
+                            <td>Intensivo en vivo</td>
+                            <td>Asíncrono (clases grabadas)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Grupal o Individual</th>
+                            <td>Grupal</td>
+                            <td>Grupal</td>
+                            <td>Individual</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Seguimiento</th>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Interacción profesor-estudiante</th>
+                            <td>Tiempo real</td>
+                            <td>Tiempo real</td>
+                            <td>A través de WhatsApp en horario laboral</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Modalidad</th>
+                            <td>En vivo</td>
+                            <td>En vivo</td>
+                            <td>Asíncrono</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="scope" >Cantidad de días</th>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div>
+    <h1 class="text-center">VOTÁ AHORA! </h1>
+</div>
+<form th:action="@{/}" th:object="${votante}" method="post" class="justify-content-center d-flex mb-4">
+    <input required="true" type="text" class="m-5" th:field="${votante.name}" placeholder="Nombre...">
+    <input required="true" type="text" class="m-5" th:field="${votante.lastname}" placeholder="Apellido...">
+    <select name="combo" id="combo"  class="m-5" size="1rem" th:field="${votante.vote}">
+        <option value="1">Presencial</option>
+        <option value="2">Virtual Síncrono</option>
+        <option value="3">Virtual Asíncrono</option>
+    </select>
+    <input type="submit" class="btn btn-primary m-5">
+</form>
+
+<script type="text/javascript" th:href="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:href="@{/js/main.js}"></script>
+<script type="text/javascript" th:href="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:href="@{/js/popper.js}"></script>
+
+</body>
+</html>
+
